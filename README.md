@@ -8,7 +8,7 @@ Installion instruction for
 
 
 ## Configmap
-We will use configmap api to create nginx configuration.
+We will use configmap api to create nginx configuration. The configMap resource provides a way to inject configuration data into Pods. The data stored in a ConfigMap object can be referenced in a volume of type configMap and then consumed by containerized applications running in a Pod.
 
 ```
 $ kubectl create -f configmap.yaml
@@ -42,7 +42,7 @@ my-app-77445b4858-dprqb   2/2     Running   0          30s
 
 
 ## Service
-Kubernetes has powerful networking capabilities that control how applications communicate. 
+Kubernetes has powerful networking capabilities that control how applications communicate. Service is assigned a unique IP address (also called clusterIP). 
 
 ```
 $ kubectl create -f service.yaml
@@ -58,7 +58,7 @@ my-app-service   NodePort    10.99.232.63   <none>        80:30080/TCP   26s
 ```
 
 
-Now we can access our app
+Now we should be able to curl the nginx Service on <CLUSTER-IP>:<PORT>
 ```
 $ curl localhost:30080/index.php
 This is my php application
