@@ -49,6 +49,8 @@ $ kubectl create -f service.yaml
 service/my-app-service created
 ```
 
+The Service selects all applications with the label webapp1. As multiple replicas, or instances, are deployed, they will be automatically load balanced based on this common label. The Service makes the application available via a NodePort.
+
 Checking services
 ```
 $ kubectl get services
