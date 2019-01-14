@@ -63,3 +63,22 @@ Now we can access our app
 $ curl localhost:30080/index.php
 This is my php application
 ```
+
+
+## Scalling
+We can scale up to 3 replicas from 1 modifiying deployment.yaml replicas field as "replicas: 3" and running the following kubectl command
+```
+$ kubectl apply -f deployment.yaml
+```
+
+Lets check deployment and pods
+```
+$ kubectl get deployments
+NAME     DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+my-app   3         3         3            3           1h
+$ kubectl get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+my-app-77445b4858-74rlw   2/2     Running   0          11s
+my-app-77445b4858-dprqb   2/2     Running   0          1h
+my-app-77445b4858-pszr4   2/2     Running   0          11s
+```
