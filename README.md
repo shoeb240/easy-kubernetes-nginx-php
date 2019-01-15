@@ -1,4 +1,4 @@
-# easy-kubernetes-nginx-php
+# Kubernetes Nginx PHP Bootstrap
 Single node cluster to host php application with minimum effort
 
 ## Kubernetes Installation
