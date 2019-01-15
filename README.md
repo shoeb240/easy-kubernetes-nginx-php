@@ -6,6 +6,12 @@ Installion instruction for
 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and 
 [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
+Start minikube:
+```
+minikube start
+```
+
+To install and run Kubernetes on Mac follow [this](https://rominirani.com/tutorial-getting-started-with-kubernetes-with-docker-on-mac-7f58467203fd)
 
 ## Configmap
 We will use configmap object to create nginx configuration. The configMap resource provides a way to inject configuration data into Pods. The data stored in a ConfigMap object can be referenced in a volume of type configMap and then consumed by containerized applications running in a Pod.
